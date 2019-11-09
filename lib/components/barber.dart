@@ -15,8 +15,8 @@ class BarberWidget extends StatelessWidget {
     isSelected = barber == selectedBarber;
 
     return AnimatedContainer(
-        duration: Duration(milliseconds: 500),
-        margin: EdgeInsets.only(left: 15.0, right: 15.0),
+        duration: Duration(milliseconds: 200),
+        margin: EdgeInsets.only(left: 35.0),
         curve: Curves.easeIn,
         // color: Colors.yellow,
         child: InkWell(
@@ -28,8 +28,8 @@ class BarberWidget extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: Image.asset('images/barber-$imageNumber.jpg',
-                      height: 200.0,
-                      width: 200.0,
+                      height: 175.0,
+                      width: 175.0,
                       color: isSelected ? null : Colors.grey,
                       colorBlendMode: isSelected ? null : BlendMode.saturation,
                       fit: BoxFit.fitWidth),
@@ -41,7 +41,9 @@ class BarberWidget extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 20.0,
                           fontFamily: 'OpenSans',
-                          fontWeight: isSelected ? FontWeight.bold : null),
+                          fontWeight: isSelected ? FontWeight.bold : null,
+                          decoration:
+                              isSelected ? TextDecoration.underline : null),
                     )),
               ],
             )));

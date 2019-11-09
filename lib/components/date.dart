@@ -14,7 +14,7 @@ class DateWidget extends StatelessWidget {
     isSelected = date == selectedDate;
 
     return AnimatedContainer(
-      margin: EdgeInsets.only(right: 15.0, left: 15.0),
+      margin: EdgeInsets.only(left: 40.0),
       duration: Duration(milliseconds: 200),
       curve: Curves.easeIn,
       decoration: BoxDecoration(
@@ -37,7 +37,7 @@ class DateWidget extends StatelessWidget {
                   fontFamily: 'Raleway',
                   fontSize: 25.0,
                   fontWeight: FontWeight.w600,
-                  color: isSelected ? Colors.white : Colors.black54),
+                  color: isSelected ? Colors.white : Colors.black87),
             ),
             Text(
               day,
@@ -45,7 +45,7 @@ class DateWidget extends StatelessWidget {
                   fontFamily: 'Raleway',
                   fontSize: 13.0,
                   fontWeight: FontWeight.w400,
-                  color: isSelected ? Colors.white : Colors.black38),
+                  color: isSelected ? Colors.white : Colors.black45),
             )
           ],
         ),

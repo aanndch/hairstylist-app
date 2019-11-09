@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../components/date.dart';
 import '../components/barber.dart';
+import '../components/time.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,8 +10,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int selectedDate = 18;
-  String selectedBarber = 'Andrew';
-  String selectedTime = '12:30';
+  String selectedBarber = 'Jonathan';
+  String selectedTime = '11:00';
 
   bool isSelected;
 
@@ -36,7 +37,6 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Container(
             height: 110.0,
-            padding: EdgeInsets.only(left: 15.0),
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(
                   blurRadius: 3.0,
@@ -69,9 +69,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            height: 240.0,
-            margin: EdgeInsets.only(top: 50.0),
-            padding: EdgeInsets.only(left: 15.0),
+            height: 215.0,
+            margin: EdgeInsets.only(top: 60.0),
             child: ListView(
               scrollDirection: Axis.horizontal,
               physics: BouncingScrollPhysics(),
@@ -84,6 +83,29 @@ class _HomePageState extends State<HomePage> {
                 BarberWidget('Manny', selectedBarber, 6, this.selectBarber)
               ],
             ),
+          ),
+          Container(
+            height: 50,
+            margin: EdgeInsets.only(top: 60.0),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              physics: BouncingScrollPhysics(),
+              children: <Widget>[
+                TimeWidget('09:30', selectedTime, this.selectTime),
+                TimeWidget('11:00', selectedTime, this.selectTime),
+                TimeWidget('12:30', selectedTime, this.selectTime),
+                TimeWidget('14:00', selectedTime, this.selectTime),
+                TimeWidget('15:30', selectedTime, this.selectTime),
+                TimeWidget('17:00', selectedTime, this.selectTime),
+                TimeWidget('18:30', selectedTime, this.selectTime),
+              ],
+            ),
+          ),
+          Container(
+            height: 75,
+            width: 400,
+            margin: EdgeInsets.only(top: 65.0),
+            color: Colors.black,
           )
         ],
       ),
@@ -99,6 +121,12 @@ class _HomePageState extends State<HomePage> {
   selectBarber(barber) {
     setState(() {
       selectedBarber = barber;
+    });
+  }
+
+  selectTime(time) {
+    setState(() {
+      selectedTime = time;
     });
   }
 }
