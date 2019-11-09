@@ -20,7 +20,7 @@ class DateWidget extends StatelessWidget {
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: isSelected
-              ? Colors.black.withOpacity(0.8)
+              ? Colors.black.withOpacity(0.9)
               : Colors.grey.withOpacity(0.1)),
       width: 70.0,
       height: 70.0,
@@ -34,17 +34,17 @@ class DateWidget extends StatelessWidget {
             Text(
               date.toString(),
               style: TextStyle(
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Raleway',
                   fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                   color: isSelected ? Colors.white : Colors.black54),
             ),
             Text(
               day,
               style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.normal,
+                  fontFamily: 'Raleway',
+                  fontSize: 13.0,
+                  fontWeight: FontWeight.w400,
                   color: isSelected ? Colors.white : Colors.black38),
             )
           ],

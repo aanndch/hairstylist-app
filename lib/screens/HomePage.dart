@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
         title: Text(
           'BOOKING',
           style: TextStyle(
-              fontFamily: 'Roboto', fontSize: 20.0, color: Colors.black),
+              fontSize: 20.0, color: Colors.black, fontFamily: 'Gothic'),
         ),
         centerTitle: true,
         leading: IconButton(
@@ -31,10 +31,8 @@ class _HomePageState extends State<HomePage> {
           color: Colors.black,
         ),
       ),
-      body: ListView(
+      body: Column(
         children: <Widget>[
-          // Stack(
-          //   children: <Widget>[
           Container(
             height: 110.0,
             decoration: BoxDecoration(boxShadow: [
@@ -57,6 +55,17 @@ class _HomePageState extends State<HomePage> {
                   DateWidget(25, 'wed', selectedDate, this.selectDate),
                 ],
               ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 30.0),
+            child: Text(
+              'Hagorapt',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'Gothic',
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.w500),
             ),
           )
         ],
