@@ -105,7 +105,20 @@ class _HomePageState extends State<HomePage> {
             height: 75,
             width: 400,
             margin: EdgeInsets.only(top: 65.0),
-            color: Colors.black,
+            child: RaisedButton(
+              onPressed: () {},
+              color: Colors.black,
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(5)),
+              child: Text(
+                'BOOK',
+                style: TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.white,
+                    fontFamily: 'Gothic',
+                    letterSpacing: 2.5),
+              ),
+            ),
           )
         ],
       ),
