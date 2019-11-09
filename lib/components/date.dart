@@ -6,8 +6,8 @@ class DateWidget extends StatelessWidget {
   final date;
   final day;
   final selectedDate;
-  bool isSelected;
   final Function selectDate;
+  bool isSelected;
 
   @override
   Widget build(BuildContext context) {
