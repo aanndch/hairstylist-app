@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.horizontal,
               physics: BouncingScrollPhysics(),
               children: <Widget>[
+                // Hardcoded values
                 DateWidget(18, 'tue', selectedDate, this.selectDate),
                 DateWidget(19, 'wed', selectedDate, this.selectDate),
                 DateWidget(20, 'thur', selectedDate, this.selectDate),
@@ -76,6 +77,7 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.horizontal,
               physics: BouncingScrollPhysics(),
               children: <Widget>[
+                // Hardcoded values
                 BarberWidget('Jonathan', selectedBarber, 1, this.selectBarber),
                 BarberWidget('Andrew', selectedBarber, 2, this.selectBarber),
                 BarberWidget('Tony', selectedBarber, 3, this.selectBarber),
@@ -92,6 +94,7 @@ class _HomePageState extends State<HomePage> {
               scrollDirection: Axis.horizontal,
               physics: BouncingScrollPhysics(),
               children: <Widget>[
+                // Hardcoded values
                 TimeWidget('09:30', selectedTime, this.selectTime),
                 TimeWidget('11:00', selectedTime, this.selectTime),
                 TimeWidget('12:30', selectedTime, this.selectTime),
