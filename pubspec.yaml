@@ -38,9 +38,13 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+    - images/barber-1.jpg
+    - images/barber-2.jpg
+    - images/barber-3.jpg
+    - images/barber-4.jpg
+    - images/barber-5.jpg
+    - images/barber-6.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
@@ -54,6 +58,10 @@ flutter:
     - family: Gothic
       fonts:
         - asset: fonts/PathwayGothicOne-Regular.ttf
+          weight: 400
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans-Regular.ttf
           weight: 400
   #
   # For details regarding fonts from package dependencies,
