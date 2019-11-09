@@ -8,10 +8,10 @@ class BarberWidget extends StatelessWidget {
   final selectedBarber;
   final imageNumber;
   final Function selectBarber;
-  bool isSelected;
 
   @override
   Widget build(BuildContext context) {
+    bool isSelected;
     isSelected = barber == selectedBarber;
 
     return AnimatedContainer(

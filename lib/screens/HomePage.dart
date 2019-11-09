@@ -12,6 +12,7 @@ class _HomePageState extends State<HomePage> {
   int selectedDate = 18;
   String selectedBarber = 'Jonathan';
   String selectedTime = '11:00';
+  int cost = 65;
 
   bool isSelected;
 
@@ -112,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                     height: 75,
                     child: RaisedButton(
                       onPressed: () {
-                        book(selectedBarber, selectedDate, selectedTime);
+                        book(selectedBarber, selectedDate, selectedTime, cost);
                       },
                       color: Colors.black,
                       shape: RoundedRectangleBorder(
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                           color: Color.fromRGBO(50, 50, 50, 1),
                           child: Center(
                               child: Text(
-                            '\$65',
+                            '\$$cost',
                             style: TextStyle(
                               fontFamily: 'Gothic',
                               fontSize: 25.0,
@@ -169,7 +170,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  book(barber, date, time) {
-    print("Barber: $barber, Date:$date, Time:$time");
+  book(barber, date, time, cost) {
+    print("Barber: $barber, Date:$date, Time:$time, Cost:$cost");
   }
 }

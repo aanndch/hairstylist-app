@@ -7,10 +7,10 @@ class DateWidget extends StatelessWidget {
   final day;
   final selectedDate;
   final Function selectDate;
-  bool isSelected;
 
   @override
   Widget build(BuildContext context) {
+    bool isSelected;
     isSelected = date == selectedDate;
 
     return AnimatedContainer(

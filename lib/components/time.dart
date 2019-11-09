@@ -6,10 +6,10 @@ class TimeWidget extends StatelessWidget {
   final time;
   final selectedTime;
   final Function selectTime;
-  bool isSelected;
 
   @override
   Widget build(BuildContext context) {
+    bool isSelected;
     isSelected = time == selectedTime;
 
     return AnimatedContainer(
