@@ -102,24 +102,50 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Container(
-            height: 75,
-            width: 400,
-            margin: EdgeInsets.only(top: 65.0),
-            child: RaisedButton(
-              onPressed: () {},
-              color: Colors.black,
-              shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(5)),
-              child: Text(
-                'BOOK',
-                style: TextStyle(
-                    fontSize: 30.0,
-                    color: Colors.white,
-                    fontFamily: 'Gothic',
-                    letterSpacing: 2.5),
-              ),
-            ),
-          )
+              height: 75,
+              width: 400,
+              margin: EdgeInsets.only(top: 65.0),
+              child: Stack(
+                children: <Widget>[
+                  ButtonTheme(
+                    minWidth: 400,
+                    height: 75,
+                    child: RaisedButton(
+                      onPressed: () {
+                        book(selectedBarber, selectedDate, selectedTime);
+                      },
+                      color: Colors.black,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(5)),
+                      child: Text(
+                        'BOOK',
+                        style: TextStyle(
+                            fontSize: 30.0,
+                            color: Colors.white,
+                            fontFamily: 'Gothic',
+                            letterSpacing: 2.5),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                      top: 10.0,
+                      right: 10.0,
+                      bottom: 10.0,
+                      child: Container(
+                          height: 50,
+                          width: 50,
+                          color: Color.fromRGBO(50, 50, 50, 1),
+                          child: Center(
+                              child: Text(
+                            '\$65',
+                            style: TextStyle(
+                              fontFamily: 'Gothic',
+                              fontSize: 25.0,
+                              color: Colors.white,
+                            ),
+                          ))))
+                ],
+              ))
         ],
       ),
     );
@@ -141,5 +167,9 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       selectedTime = time;
     });
+  }
+
+  book(barber, date, time) {
+    print("Barber: $barber, Date:$date, Time:$time");
   }
 }
