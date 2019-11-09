@@ -16,7 +16,7 @@ class BarberWidget extends StatelessWidget {
 
     return AnimatedContainer(
         duration: Duration(milliseconds: 200),
-        margin: EdgeInsets.only(left: 35.0),
+        margin: EdgeInsets.only(left: 20.0, right: 20.0),
         curve: Curves.easeIn,
         // color: Colors.yellow,
         child: InkWell(

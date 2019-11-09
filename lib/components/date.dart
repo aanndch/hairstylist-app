@@ -14,7 +14,7 @@ class DateWidget extends StatelessWidget {
     isSelected = date == selectedDate;
 
     return AnimatedContainer(
-      margin: EdgeInsets.only(left: 40.0),
+      margin: EdgeInsets.only(left: 20.0, right: 20.0),
       duration: Duration(milliseconds: 200),
       curve: Curves.easeIn,
       decoration: BoxDecoration(

@@ -13,7 +13,7 @@ class TimeWidget extends StatelessWidget {
     isSelected = time == selectedTime;
 
     return AnimatedContainer(
-      margin: EdgeInsets.only(left: 35.0),
+      margin: EdgeInsets.only(left: 15.0, right: 15.0),
       duration: Duration(milliseconds: 200),
       curve: Curves.easeIn,
       decoration: BoxDecoration(
